@@ -1,9 +1,10 @@
 module "ec2-test" {
-  source = "../5.5.terraform-aws-ec2"
+  #source        = "../5.5.terraform-aws-ec2"
+  source = "git::https://github.com/rajalingarao/5.5.terraform-aws-ec2.git?ref=main"
   instance_type = "t3.small"
   tags = {
-    Name = "Module-Test"
+    Name      = "Module-Test"
     Terraform = "true"
   }
-  
+
 }
